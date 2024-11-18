@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Vertical Carousel with Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel-container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background-color: #f0f0f0;
+    }
+
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 15s linear infinite; /* Slower scrolling */
+    }
+
+    .carousel-item {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      position: relative;
+    }
+
+    .carousel-item .image-container {
+      width: 80vw; /* Adjust width as needed */
+      height: 80vw; /* Make it square */
+      border: 5px solid #fff; /* Border around image */
+      border-radius: 10px; /* Optional rounded corners */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000; /* Background color in case image is smaller */
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures the image fits entirely inside the square container */
+    }
+
+    .carousel-item .text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .text-below {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 20px;
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .redirect-btn {
+      display: block;
+      width: 200px;
+      height: 50px;
+      margin: 30px auto;
+      background-color: #e67e22;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Media Queries for Responsiveness on Smaller Devices */
+    @media (max-width: 768px) {
+      .carousel-item .image-container {
+        width: 80vw;
+        height: 80vw;
+      }
+
+      .carousel-item .text-overlay {
+        font-size: 1.5rem;
+      }
+
+      .text-below {
+        font-size: 1.2rem;
+      }
+
+      .redirect-btn {
+        font-size: 1rem;
+      }
+    }
+
+    /* Further adjustments for very small screens like Android */
+    @media (max-width: 480px) {
+      .carousel-item .image-container {
+        width: 90vw;
+        height: 90vw;
+      }
+
+      .carousel-item .text-overlay {
+        font-size: 1.2rem;
+      }
+
+      .text-below {
+        font-size: 1rem;
+      }
+
+      .redirect-btn {
+        width: 180px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Infinite Vertical Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image11.jpeg" alt="Image 1">
+        </div>
+        <div class="text-overlay">Text that melt my sigma traits</div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image22.jpeg" alt="Image 2">
+        </div>
+        <div class="text-overlay">Text that make me blush</div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image33.jpeg" alt="Image 3">
+        </div>
+        <div class="text-overlay">Text that I saw again and again</div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image44.jpeg" alt="Image 4">
+        </div>
+        <div class="text-overlay">Text that turns me into pookie</div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image55.jpeg" alt="Image 5">
+        </div>
+        <div class="text-overlay">Text that make me slide into your DM</div>
+      </div>
+      <div class="carousel-item">
+        <div class="image-container">
+          <img src="image66.jpeg" alt="Image 6">
+        </div>
+        <div class="text-overlay">Text that keep me ask more about yourself</div>
+      </div>
+      <!-- Add more items with images -->
+    </div>
+  </div>
+
+  <!-- Text Below Carousel -->
+  <div class="text-below">
+    Website ends here.
+  </div>
+
+  <!-- Redirect Button -->
+  <a href="https://me-qr.com/vspGOkVo" class="redirect-btn">Click here to connect with sigma</a>
+
+</body>
+</html>
